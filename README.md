@@ -4,6 +4,8 @@ A single-page marketing site for a healthcare clinic — hero, services, testimo
 
 🔗 **Live site:** https://mcpiero77-ai.github.io/healthcare/
 
+![Willow Creek Family Clinic screenshot](assets/screenshot.png)
+
 ## Overview
 
 The entire site (markup, styles, and behavior) lives in one self-contained file, [`index.html`](index.html). There's no build step, no package manager, and no dependencies beyond a Google Fonts link.
