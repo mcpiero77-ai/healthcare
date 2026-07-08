@@ -1397,8 +1397,11 @@
         _captcha: 'false'
       })
     })
-      .then((response) => {
-        if (!response.ok) throw new Error('Request failed');
+      .then((response) => response.json())
+      .then((result) => {
+        if (result.success === 'false' || result.success === false) {
+          throw new Error(result.message || 'Request failed');
+        }
         clearAllErrors();
         formStatus.className = 'form-status success';
         formStatus.textContent = "Thank you! We'll contact you shortly.";
@@ -1470,8 +1473,11 @@
         _captcha: 'false'
       })
     })
-      .then((response) => {
-        if (!response.ok) throw new Error('Request failed');
+      .then((response) => response.json())
+      .then((result) => {
+        if (result.success === 'false' || result.success === false) {
+          throw new Error(result.message || 'Request failed');
+        }
         showFieldError(field, '');
         checklistStatus.className = 'form-status success';
         checklistStatus.textContent = 'Check your inbox — your checklist is on its way!';
