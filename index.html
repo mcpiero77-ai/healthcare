@@ -1,0 +1,1133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Willow Creek Family Clinic | Compassionate Care, Close to You</title>
+<meta name="description" content="Willow Creek Family Clinic offers trusted, compassionate healthcare for the whole family. Book an appointment today.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+  /* ============================= */
+  /* ===== ROOT / VARIABLES  ===== */
+  /* ============================= */
+  :root {
+    --color-primary: #0f6e8c;
+    --color-primary-dark: #0b4f65;
+    --color-teal: #14b8a6;
+    --color-teal-light: #e6fbf8;
+    --color-blue-light: #eaf6fb;
+    --color-accent: #ff7a59;
+    --color-accent-dark: #e8613f;
+    --color-text: #1f2d3d;
+    --color-text-muted: #5b6b7b;
+    --color-white: #ffffff;
+    --color-border: #e1ecf1;
+    --font-heading: 'Poppins', sans-serif;
+    --font-body: 'Inter', sans-serif;
+    --shadow-sm: 0 2px 8px rgba(15, 110, 140, 0.08);
+    --shadow-md: 0 8px 24px rgba(15, 110, 140, 0.12);
+    --radius: 14px;
+    --nav-height: 72px;
+  }
+
+  * { box-sizing: border-box; }
+
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: var(--nav-height);
+  }
+
+  body {
+    margin: 0;
+    font-family: var(--font-body);
+    color: var(--color-text);
+    background: var(--color-white);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3, .logo {
+    font-family: var(--font-heading);
+    line-height: 1.25;
+    margin: 0;
+  }
+
+  img { max-width: 100%; display: block; }
+
+  a { color: inherit; }
+
+  .container {
+    width: 100%;
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  .section-heading {
+    text-align: center;
+    max-width: 640px;
+    margin: 0 auto 48px;
+  }
+
+  .section-heading h2 {
+    font-size: clamp(1.7rem, 3vw, 2.3rem);
+    color: var(--color-primary-dark);
+  }
+
+  .section-heading p {
+    color: var(--color-text-muted);
+    margin-top: 12px;
+    font-size: 1.05rem;
+  }
+
+  .eyebrow {
+    display: inline-block;
+    color: var(--color-teal);
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    font-size: 0.78rem;
+    margin-bottom: 10px;
+  }
+
+  section { padding: 88px 0; }
+
+  /* Buttons */
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 14px 28px;
+    border-radius: 999px;
+    font-weight: 600;
+    font-size: 1rem;
+    text-decoration: none;
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease, color 0.15s ease;
+  }
+  .btn:hover { transform: translateY(-2px); }
+  .btn:focus-visible {
+    outline: 3px solid var(--color-teal);
+    outline-offset: 2px;
+  }
+
+  .btn-primary {
+    background: var(--color-accent);
+    color: var(--color-white);
+    box-shadow: 0 6px 18px rgba(255, 122, 89, 0.35);
+  }
+  .btn-primary:hover { background: var(--color-accent-dark); }
+
+  .btn-secondary {
+    background: transparent;
+    color: var(--color-white);
+    border-color: rgba(255,255,255,0.7);
+  }
+  .btn-secondary:hover { background: rgba(255,255,255,0.15); }
+
+  .btn-outline {
+    background: transparent;
+    color: var(--color-primary);
+    border-color: var(--color-primary);
+  }
+  .btn-outline:hover { background: var(--color-blue-light); }
+
+  /* ============================= */
+  /* =====  NAVBAR (STICKY)  ===== */
+  /* ============================= */
+  .navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    height: var(--nav-height);
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .navbar .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: var(--color-primary-dark);
+    text-decoration: none;
+  }
+
+  .logo-mark {
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
+    background: linear-gradient(135deg, var(--color-primary), var(--color-teal));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.1rem;
+  }
+
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .nav-links a {
+    text-decoration: none;
+    font-weight: 500;
+    color: var(--color-text);
+    font-size: 0.98rem;
+    padding: 6px 2px;
+    border-bottom: 2px solid transparent;
+    transition: color 0.15s ease, border-color 0.15s ease;
+  }
+  .nav-links a:hover,
+  .nav-links a:focus-visible { color: var(--color-primary); border-color: var(--color-teal); }
+
+  .nav-cta {
+    display: inline-flex;
+    padding: 10px 20px;
+    font-size: 0.95rem;
+  }
+
+  .nav-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    width: 40px;
+    height: 40px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 6px;
+  }
+  .nav-toggle span {
+    display: block;
+    height: 2px;
+    background: var(--color-primary-dark);
+    border-radius: 2px;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+  }
+  .nav-toggle[aria-expanded="true"] span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  .nav-toggle[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
+  .nav-toggle[aria-expanded="true"] span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+  @media (max-width: 860px) {
+    .nav-toggle { display: flex; }
+    .nav-links {
+      position: absolute;
+      top: var(--nav-height);
+      left: 0;
+      right: 0;
+      background: var(--color-white);
+      flex-direction: column;
+      align-items: stretch;
+      gap: 0;
+      max-height: 0;
+      overflow: hidden;
+      border-bottom: 1px solid var(--color-border);
+      transition: max-height 0.25s ease;
+    }
+    .nav-links.open { max-height: 400px; }
+    .nav-links li { border-top: 1px solid var(--color-border); }
+    .nav-links a { display: block; padding: 16px 24px; }
+    .nav-cta { margin: 16px 24px; }
+  }
+
+  /* ============================= */
+  /* =====      HERO         ===== */
+  /* ============================= */
+  .hero {
+    position: relative;
+    color: var(--color-white);
+    background: linear-gradient(120deg, var(--color-primary-dark) 0%, var(--color-primary) 55%, var(--color-teal) 100%);
+    padding: 100px 0 0;
+    overflow: hidden;
+  }
+
+  .hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(circle at 85% 20%, rgba(255,255,255,0.14), transparent 45%),
+      radial-gradient(circle at 10% 90%, rgba(255,255,255,0.10), transparent 40%);
+    pointer-events: none;
+  }
+
+  .hero-inner {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 48px;
+    align-items: center;
+    padding-bottom: 64px;
+  }
+
+  .hero-content .eyebrow { color: #bdf0e8; }
+
+  .hero-content h1 {
+    font-size: clamp(2.2rem, 4.5vw, 3.4rem);
+    font-weight: 700;
+  }
+
+  .hero-content p {
+    margin-top: 18px;
+    font-size: 1.15rem;
+    color: rgba(255,255,255,0.9);
+    max-width: 46ch;
+  }
+
+  .hero-actions {
+    margin-top: 32px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  .hero-visual {
+    position: relative;
+    display: flex;
+    justify-content: center;
+  }
+
+  .hero-visual .card {
+    background: rgba(255,255,255,0.12);
+    border: 1px solid rgba(255,255,255,0.25);
+    border-radius: var(--radius);
+    padding: 28px;
+    backdrop-filter: blur(6px);
+    width: 100%;
+    max-width: 340px;
+  }
+
+  .hero-visual .card-icon {
+    width: 52px;
+    height: 52px;
+    border-radius: 12px;
+    background: var(--color-white);
+    color: var(--color-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.6rem;
+    margin-bottom: 16px;
+  }
+
+  .hero-visual .card h3 { font-size: 1.15rem; margin-bottom: 8px; }
+  .hero-visual .card p { margin: 0; color: rgba(255,255,255,0.85); font-size: 0.95rem; }
+
+  /* Trust strip */
+  .trust-strip {
+    position: relative;
+    background: rgba(255, 255, 255, 0.08);
+    border-top: 1px solid rgba(255,255,255,0.18);
+  }
+
+  .trust-strip ul {
+    list-style: none;
+    margin: 0;
+    padding: 22px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px 40px;
+  }
+
+  .trust-strip li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 500;
+    font-size: 0.95rem;
+    color: var(--color-white);
+  }
+
+  .trust-strip li span.icon {
+    font-size: 1.1rem;
+  }
+
+  @media (max-width: 900px) {
+    .hero-inner { grid-template-columns: 1fr; text-align: center; }
+    .hero-content p { margin-left: auto; margin-right: auto; }
+    .hero-actions { justify-content: center; }
+    .hero-visual { order: -1; }
+  }
+
+  /* ============================= */
+  /* =====    SERVICES        ==== */
+  /* ============================= */
+  .services { background: var(--color-blue-light); }
+
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+  }
+
+  .service-card {
+    background: var(--color-white);
+    border-radius: var(--radius);
+    padding: 30px 24px;
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--color-border);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  .service-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
+
+  .service-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    background: var(--color-teal-light);
+    color: var(--color-teal);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+    margin-bottom: 18px;
+  }
+
+  .service-card h3 { font-size: 1.1rem; margin-bottom: 8px; color: var(--color-primary-dark); }
+  .service-card p { margin: 0; color: var(--color-text-muted); font-size: 0.95rem; }
+
+  @media (max-width: 900px) {
+    .services-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (max-width: 560px) {
+    .services-grid { grid-template-columns: 1fr; }
+  }
+
+  /* ============================= */
+  /* =====  TESTIMONIALS      ==== */
+  /* ============================= */
+  .testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+
+  .testimonial-card {
+    background: var(--color-white);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    padding: 28px;
+    box-shadow: var(--shadow-sm);
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .stars { color: #f5a623; font-size: 1rem; letter-spacing: 2px; }
+  .stars .empty { color: #e2e2e2; }
+
+  .testimonial-quote {
+    color: var(--color-text);
+    font-size: 0.98rem;
+    flex-grow: 1;
+  }
+
+  .testimonial-person {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+
+  .avatar {
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-white);
+    font-weight: 600;
+    font-family: var(--font-heading);
+    flex-shrink: 0;
+  }
+
+  .testimonial-person .name { font-weight: 600; font-size: 0.95rem; }
+  .testimonial-person .role { color: var(--color-text-muted); font-size: 0.85rem; }
+
+  @media (max-width: 900px) {
+    .testimonials-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (max-width: 620px) {
+    .testimonials-grid { grid-template-columns: 1fr; }
+  }
+
+  /* ============================= */
+  /* =====   ENQUIRY FORM     ==== */
+  /* ============================= */
+  .contact { background: var(--color-blue-light); }
+
+  .contact-wrap {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 48px;
+    align-items: flex-start;
+  }
+
+  .contact-info {
+    background: linear-gradient(160deg, var(--color-primary-dark), var(--color-primary));
+    color: var(--color-white);
+    border-radius: var(--radius);
+    padding: 36px 30px;
+  }
+
+  .contact-info h3 { font-size: 1.3rem; margin-bottom: 12px; }
+  .contact-info p { color: rgba(255,255,255,0.88); margin-bottom: 24px; }
+
+  .contact-info ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .contact-info li {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    font-size: 0.95rem;
+  }
+
+  .contact-info .icon {
+    width: 34px;
+    height: 34px;
+    border-radius: 8px;
+    background: rgba(255,255,255,0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .contact-form {
+    background: var(--color-white);
+    border-radius: var(--radius);
+    padding: 36px;
+    box-shadow: var(--shadow-md);
+    border: 1px solid var(--color-border);
+  }
+
+  .form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+
+  .form-field { display: flex; flex-direction: column; gap: 6px; }
+  .form-field.full { grid-column: 1 / -1; }
+
+  .form-field label {
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: var(--color-text);
+  }
+
+  .form-field input,
+  .form-field textarea {
+    font: inherit;
+    padding: 12px 14px;
+    border-radius: 10px;
+    border: 1.5px solid var(--color-border);
+    background: var(--color-white);
+    color: var(--color-text);
+    transition: border-color 0.15s ease, box-shadow 0.15s ease;
+  }
+
+  .form-field input:focus,
+  .form-field textarea:focus {
+    outline: none;
+    border-color: var(--color-teal);
+    box-shadow: 0 0 0 3px rgba(20, 184, 166, 0.18);
+  }
+
+  .form-field input[aria-invalid="true"],
+  .form-field textarea[aria-invalid="true"] {
+    border-color: #e0453c;
+  }
+
+  .field-error {
+    color: #d1392f;
+    font-size: 0.82rem;
+    min-height: 1em;
+  }
+
+  .contact-form textarea { resize: vertical; min-height: 100px; }
+
+  .form-submit {
+    margin-top: 8px;
+    width: 100%;
+  }
+
+  .form-status {
+    margin-top: 18px;
+    padding: 14px 16px;
+    border-radius: 10px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    display: none;
+  }
+  .form-status.success {
+    display: block;
+    background: var(--color-teal-light);
+    color: #0d6b5e;
+    border: 1px solid #b8ece2;
+  }
+  .form-status.error {
+    display: block;
+    background: #fdeceb;
+    color: #a52f27;
+    border: 1px solid #f5c6c2;
+  }
+
+  @media (max-width: 900px) {
+    .contact-wrap { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 560px) {
+    .form-grid { grid-template-columns: 1fr; }
+    .contact-form { padding: 24px; }
+  }
+
+  /* ============================= */
+  /* =====      FOOTER        ==== */
+  /* ============================= */
+  footer {
+    background: #0a3242;
+    color: rgba(255,255,255,0.85);
+    padding: 64px 0 24px;
+  }
+
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr 1fr;
+    gap: 40px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid rgba(255,255,255,0.12);
+  }
+
+  .footer-brand .logo { color: var(--color-white); margin-bottom: 14px; }
+  .footer-brand p { color: rgba(255,255,255,0.7); max-width: 34ch; font-size: 0.92rem; }
+
+  .footer-col h4 {
+    font-family: var(--font-heading);
+    color: var(--color-white);
+    font-size: 1rem;
+    margin-bottom: 18px;
+  }
+
+  .footer-col ul { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 12px; }
+  .footer-col a { text-decoration: none; color: rgba(255,255,255,0.75); font-size: 0.92rem; transition: color 0.15s ease; }
+  .footer-col a:hover, .footer-col a:focus-visible { color: var(--color-teal); }
+
+  .footer-col address { font-style: normal; color: rgba(255,255,255,0.75); font-size: 0.92rem; line-height: 1.8; }
+
+  .social-links { display: flex; gap: 12px; margin-top: 18px; }
+  .social-links a {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.15s ease, transform 0.15s ease;
+  }
+  .social-links a:hover { background: var(--color-teal); transform: translateY(-2px); }
+
+  .footer-bottom {
+    padding-top: 24px;
+    text-align: center;
+    font-size: 0.85rem;
+    color: rgba(255,255,255,0.55);
+  }
+
+  @media (max-width: 760px) {
+    .footer-grid { grid-template-columns: 1fr; gap: 32px; }
+  }
+
+  /* ============================= */
+  /* =====   SCROLL FADE-IN   ==== */
+  /* ============================= */
+  .fade-in {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+  .fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .fade-in { opacity: 1; transform: none; transition: none; }
+  }
+
+  .skip-link {
+    position: absolute;
+    left: -999px;
+    top: auto;
+    background: var(--color-primary);
+    color: var(--color-white);
+    padding: 12px 18px;
+    border-radius: 8px;
+    z-index: 2000;
+  }
+  .skip-link:focus {
+    left: 16px;
+    top: 16px;
+  }
+
+  .visually-hidden {
+    position: absolute;
+    width: 1px; height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+  }
+</style>
+</head>
+<body>
+
+<a href="#main" class="skip-link">Skip to main content</a>
+
+<!-- ===== NAVBAR ===== -->
+<header class="navbar">
+  <div class="container">
+    <a href="#hero" class="logo">
+      <span class="logo-mark" aria-hidden="true">&#10010;</span>
+      Willow Creek Clinic
+    </a>
+
+    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navLinks" aria-label="Toggle navigation menu">
+      <span></span><span></span><span></span>
+    </button>
+
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#hero">Home</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#testimonials">Testimonials</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="#contact" class="btn btn-primary nav-cta">Book Appointment</a></li>
+    </ul>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ===== HERO SECTION ===== -->
+  <section id="hero" class="hero">
+    <div class="container hero-inner">
+      <div class="hero-content">
+        <span class="eyebrow">Willow Creek Family Clinic</span>
+        <h1>Compassionate Care, Close to You</h1>
+        <p>From routine checkups to specialist care, our board-certified team is here for you and your family — with same-week appointments and a clinic that feels like home.</p>
+        <div class="hero-actions">
+          <a href="#contact" class="btn btn-primary">Book an Appointment</a>
+          <a href="#services" class="btn btn-secondary">Our Services</a>
+        </div>
+      </div>
+
+      <div class="hero-visual" aria-hidden="true">
+        <div class="card">
+          <div class="card-icon">&#10084;</div>
+          <h3>Whole-Family Care</h3>
+          <p>Pediatrics, primary care, and specialist referrals — all under one roof, coordinated for you.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="trust-strip">
+      <div class="container">
+        <ul>
+          <li><span class="icon">&#128337;</span> 24/7 Support</li>
+          <li><span class="icon">&#127891;</span> Certified Doctors</li>
+          <li><span class="icon">&#128101;</span> 10,000+ Patients Served</li>
+          <li><span class="icon">&#11088;</span> 4.9/5 Patient Rating</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SERVICES SECTION ===== -->
+  <section id="services" class="services">
+    <div class="container">
+      <div class="section-heading fade-in">
+        <span class="eyebrow">What We Offer</span>
+        <h2>Care for Every Stage of Life</h2>
+        <p>Our multidisciplinary team combines modern medicine with a personal touch, so you always feel heard and cared for.</p>
+      </div>
+
+      <div class="services-grid">
+        <div class="service-card fade-in">
+          <div class="service-icon" aria-hidden="true">&#128137;</div>
+          <h3>General Checkups</h3>
+          <p>Comprehensive annual physicals and preventive screenings for every age group.</p>
+        </div>
+        <div class="service-card fade-in">
+          <div class="service-icon" aria-hidden="true">&#129489;&#8205;&#128105;&#8205;&#128103;</div>
+          <h3>Pediatrics</h3>
+          <p>Gentle, attentive care for infants, children, and teens from our pediatric specialists.</p>
+        </div>
+        <div class="service-card fade-in">
+          <div class="service-icon" aria-hidden="true">&#10084;&#65039;</div>
+          <h3>Cardiology</h3>
+          <p>Heart health assessments, ECGs, and ongoing management for cardiovascular conditions.</p>
+        </div>
+        <div class="service-card fade-in">
+          <div class="service-icon" aria-hidden="true">&#128680;</div>
+          <h3>Emergency Care</h3>
+          <p>Round-the-clock urgent care for when you need immediate medical attention.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TESTIMONIALS SECTION ===== -->
+  <section id="testimonials" class="testimonials">
+    <div class="container">
+      <div class="section-heading fade-in">
+        <span class="eyebrow">Patient Stories</span>
+        <h2>What Our Patients Say</h2>
+        <p>We're proud of the trust our community places in us. Here's what a few of our patients have to say.</p>
+      </div>
+
+      <div class="testimonials-grid">
+        <article class="testimonial-card fade-in">
+          <div class="stars" aria-label="Rated 5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p class="testimonial-quote">"The staff at Willow Creek treated my father with such patience and kindness. The doctors actually listen, and I never feel rushed during appointments."</p>
+          <div class="testimonial-person">
+            <div class="avatar" style="background:#0f6e8c;">MJ</div>
+            <div>
+              <div class="name">Maria Jimenez</div>
+              <div class="role">Patient since 2019</div>
+            </div>
+          </div>
+        </article>
+
+        <article class="testimonial-card fade-in">
+          <div class="stars" aria-label="Rated 5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p class="testimonial-quote">"Booking online was effortless and I was seen the same week. The pediatric team put my daughter completely at ease during her checkup."</p>
+          <div class="testimonial-person">
+            <div class="avatar" style="background:#14b8a6;">DT</div>
+            <div>
+              <div class="name">David Thompson</div>
+              <div class="role">Patient since 2021</div>
+            </div>
+          </div>
+        </article>
+
+        <article class="testimonial-card fade-in">
+          <div class="stars" aria-label="Rated 4.5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;<span class="empty">&#9733;</span></div>
+          <p class="testimonial-quote">"After years of putting off my heart checkups, the cardiology team here made the whole process painless and clearly explained every step."</p>
+          <div class="testimonial-person">
+            <div class="avatar" style="background:#ff7a59;">RK</div>
+            <div>
+              <div class="name">Ravi Kapoor</div>
+              <div class="role">Patient since 2018</div>
+            </div>
+          </div>
+        </article>
+
+        <article class="testimonial-card fade-in">
+          <div class="stars" aria-label="Rated 5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p class="testimonial-quote">"Clean facility, friendly front desk, and a doctor who remembered details from my last visit. It's rare to find a clinic that feels this personal."</p>
+          <div class="testimonial-person">
+            <div class="avatar" style="background:#0b4f65;">SL</div>
+            <div>
+              <div class="name">Sarah Lin</div>
+              <div class="role">Patient since 2022</div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ENQUIRY / APPOINTMENT FORM SECTION ===== -->
+  <section id="contact" class="contact">
+    <div class="container">
+      <div class="section-heading fade-in">
+        <span class="eyebrow">Get in Touch</span>
+        <h2>Request an Appointment</h2>
+        <p>Fill out the form below and our care coordinators will confirm your appointment within one business day.</p>
+      </div>
+
+      <div class="contact-wrap fade-in">
+        <div class="contact-info">
+          <h3>Visit or Reach Us</h3>
+          <p>Our friendly front-desk team is happy to help with scheduling, insurance questions, or directions.</p>
+          <ul>
+            <li><span class="icon" aria-hidden="true">&#128205;</span> 482 Maple Grove Avenue, Suite 3, Riverside, CA 92501</li>
+            <li><span class="icon" aria-hidden="true">&#128222;</span> (555) 812-4470</li>
+            <li><span class="icon" aria-hidden="true">&#9993;&#65039;</span> care@willowcreekclinic.example</li>
+            <li><span class="icon" aria-hidden="true">&#128337;</span> Mon&ndash;Fri: 8am&ndash;7pm &middot; Sat: 9am&ndash;2pm</li>
+          </ul>
+        </div>
+
+        <form class="contact-form" id="appointmentForm" novalidate>
+          <div class="form-grid">
+            <div class="form-field full">
+              <label for="fullName">Full Name</label>
+              <input type="text" id="fullName" name="fullName" autocomplete="name" aria-describedby="fullNameError">
+              <span class="field-error" id="fullNameError" role="alert"></span>
+            </div>
+
+            <div class="form-field">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" autocomplete="email" aria-describedby="emailError">
+              <span class="field-error" id="emailError" role="alert"></span>
+            </div>
+
+            <div class="form-field">
+              <label for="phone">Phone</label>
+              <input type="tel" id="phone" name="phone" autocomplete="tel" placeholder="(555) 123-4567" aria-describedby="phoneError">
+              <span class="field-error" id="phoneError" role="alert"></span>
+            </div>
+
+            <div class="form-field full">
+              <label for="preferredDate">Preferred Date</label>
+              <input type="date" id="preferredDate" name="preferredDate" aria-describedby="preferredDateError">
+              <span class="field-error" id="preferredDateError" role="alert"></span>
+            </div>
+
+            <div class="form-field full">
+              <label for="message">Message / Reason for Visit</label>
+              <textarea id="message" name="message" aria-describedby="messageError" placeholder="Tell us briefly why you'd like to book an appointment..."></textarea>
+              <span class="field-error" id="messageError" role="alert"></span>
+            </div>
+          </div>
+
+          <button type="submit" class="btn btn-primary form-submit">Request Appointment</button>
+
+          <div class="form-status" id="formStatus" role="alert" aria-live="polite"></div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="#hero" class="logo">
+          <span class="logo-mark" aria-hidden="true">&#10010;</span>
+          Willow Creek Clinic
+        </a>
+        <p>Compassionate, patient-first healthcare for your whole family — every visit, every time.</p>
+        <div class="social-links">
+          <a href="#" aria-label="Facebook">&#102;</a>
+          <a href="#" aria-label="Twitter / X">&#120;</a>
+          <a href="#" aria-label="Instagram">&#105;</a>
+          <a href="#" aria-label="LinkedIn">&#105;&#110;</a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#testimonials">Testimonials</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <address>
+          482 Maple Grove Avenue, Suite 3<br>
+          Riverside, CA 92501<br>
+          (555) 812-4470<br>
+          care@willowcreekclinic.example
+        </address>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      &copy; <span id="year"></span> Willow Creek Family Clinic. All rights reserved.
+    </div>
+  </div>
+</footer>
+
+<script>
+  // ============================================
+  // ===== FOOTER: AUTO-FILL CURRENT YEAR ======
+  // ============================================
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // ============================================
+  // ===== MOBILE NAV TOGGLE ====================
+  // ============================================
+  const navToggle = document.getElementById('navToggle');
+  const navLinks = document.getElementById('navLinks');
+
+  navToggle.addEventListener('click', () => {
+    const isOpen = navLinks.classList.toggle('open');
+    navToggle.setAttribute('aria-expanded', String(isOpen));
+  });
+
+  // Close mobile menu after a nav link is clicked
+  navLinks.querySelectorAll('a').forEach((link) => {
+    link.addEventListener('click', () => {
+      navLinks.classList.remove('open');
+      navToggle.setAttribute('aria-expanded', 'false');
+    });
+  });
+
+  // ============================================
+  // ===== SCROLL FADE-IN ANIMATIONS ============
+  // ============================================
+  const fadeEls = document.querySelectorAll('.fade-in');
+
+  if ('IntersectionObserver' in window) {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+
+    fadeEls.forEach((el) => observer.observe(el));
+  } else {
+    // Fallback: reveal everything immediately if unsupported
+    fadeEls.forEach((el) => el.classList.add('visible'));
+  }
+
+  // ============================================
+  // ===== APPOINTMENT FORM VALIDATION ==========
+  // ============================================
+  const form = document.getElementById('appointmentForm');
+  const formStatus = document.getElementById('formStatus');
+
+  const fields = {
+    fullName: {
+      input: document.getElementById('fullName'),
+      error: document.getElementById('fullNameError'),
+      validate: (value) => value.trim().length > 0 ? '' : 'Please enter your full name.'
+    },
+    email: {
+      input: document.getElementById('email'),
+      error: document.getElementById('emailError'),
+      validate: (value) => {
+        if (!value.trim()) return 'Please enter your email address.';
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return emailPattern.test(value.trim()) ? '' : 'Please enter a valid email address.';
+      }
+    },
+    phone: {
+      input: document.getElementById('phone'),
+      error: document.getElementById('phoneError'),
+      validate: (value) => {
+        if (!value.trim()) return 'Please enter your phone number.';
+        const phonePattern = /^[0-9()+\-.\s]{7,20}$/;
+        return phonePattern.test(value.trim()) ? '' : 'Please enter a valid phone number.';
+      }
+    },
+    preferredDate: {
+      input: document.getElementById('preferredDate'),
+      error: document.getElementById('preferredDateError'),
+      validate: (value) => value.trim().length > 0 ? '' : 'Please select a preferred date.'
+    },
+    message: {
+      input: document.getElementById('message'),
+      error: document.getElementById('messageError'),
+      validate: (value) => value.trim().length > 0 ? '' : 'Please tell us the reason for your visit.'
+    }
+  };
+
+  function showFieldError(field, message) {
+    field.error.textContent = message;
+    if (message) {
+      field.input.setAttribute('aria-invalid', 'true');
+    } else {
+      field.input.removeAttribute('aria-invalid');
+    }
+  }
+
+  function clearAllErrors() {
+    Object.values(fields).forEach((field) => showFieldError(field, ''));
+  }
+
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    formStatus.className = 'form-status';
+    formStatus.textContent = '';
+
+    let firstInvalidField = null;
+    let hasErrors = false;
+
+    Object.values(fields).forEach((field) => {
+      const message = field.validate(field.input.value);
+      showFieldError(field, message);
+      if (message && !firstInvalidField) {
+        firstInvalidField = field.input;
+      }
+      if (message) hasErrors = true;
+    });
+
+    if (hasErrors) {
+      formStatus.className = 'form-status error';
+      formStatus.textContent = 'Please correct the highlighted fields and try again.';
+      if (firstInvalidField) firstInvalidField.focus();
+      return;
+    }
+
+    // Build the submission payload
+    const formData = {
+      fullName: fields.fullName.input.value.trim(),
+      email: fields.email.input.value.trim(),
+      phone: fields.phone.input.value.trim(),
+      preferredDate: fields.preferredDate.input.value,
+      message: fields.message.input.value.trim(),
+      submittedAt: new Date().toISOString()
+    };
+
+    // ---------------------------------------------------------
+    // TODO: Replace this with a real API call when ready, e.g.:
+    // fetch('/api/appointments', {
+    //   method: 'POST',
+    //   headers: { 'Content-Type': 'application/json' },
+    //   body: JSON.stringify(formData)
+    // });
+    // ---------------------------------------------------------
+    console.log('Appointment request submitted:', formData);
+
+    clearAllErrors();
+    formStatus.className = 'form-status success';
+    formStatus.textContent = "Thank you! We'll contact you shortly.";
+    form.reset();
+  });
+</script>
+
+</body>
+</html>
