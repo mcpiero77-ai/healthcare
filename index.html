@@ -7,30 +7,31 @@
 <meta name="description" content="Willow Creek Family Clinic offers trusted, compassionate healthcare for the whole family. Book an appointment today.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,500;0,600;0,700;1,600&family=Special+Elite&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 
 <style>
   /* ============================= */
   /* ===== ROOT / VARIABLES  ===== */
   /* ============================= */
   :root {
-    --color-primary: #0f6e8c;
-    --color-primary-dark: #0b4f65;
-    --color-teal: #14b8a6;
-    --color-teal-light: #e6fbf8;
-    --color-blue-light: #eaf6fb;
-    --color-accent: #ff7a59;
-    --color-accent-dark: #e8613f;
-    --color-text: #1f2d3d;
-    --color-text-muted: #5b6b7b;
-    --color-white: #ffffff;
-    --color-border: #e1ecf1;
-    --font-heading: 'Poppins', sans-serif;
+    --color-paper: #EDE3D0;
+    --color-paper-deep: #DCCBA8;
+    --color-card: #F7F1E4;
+    --color-ink: #22281F;
+    --color-ink-muted: #665F49;
+    --color-pine: #1F5C4E;
+    --color-pine-deep: #163F35;
+    --color-pine-light: #DCE9E2;
+    --color-stamp: #B3402E;
+    --color-stamp-dark: #8F3024;
+    --color-border: #C9B991;
+    --font-display: 'Fraunces', serif;
+    --font-utility: 'Special Elite', monospace;
     --font-body: 'Inter', sans-serif;
-    --shadow-sm: 0 2px 8px rgba(15, 110, 140, 0.08);
-    --shadow-md: 0 8px 24px rgba(15, 110, 140, 0.12);
-    --radius: 14px;
-    --nav-height: 72px;
+    --shadow-sm: 0 2px 10px rgba(34, 40, 31, 0.10);
+    --shadow-md: 0 10px 28px rgba(34, 40, 31, 0.16);
+    --radius: 4px;
+    --nav-height: 76px;
   }
 
   * { box-sizing: border-box; }
@@ -43,17 +44,20 @@
   body {
     margin: 0;
     font-family: var(--font-body);
-    color: var(--color-text);
-    background: var(--color-white);
+    color: var(--color-ink);
+    background: var(--color-paper);
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
   }
 
-  h1, h2, h3, .logo {
-    font-family: var(--font-heading);
-    line-height: 1.25;
+  h1, h2, h3 {
+    font-family: var(--font-display);
+    line-height: 1.2;
     margin: 0;
+    font-weight: 600;
   }
+
+  h1 em, h2 em { font-style: italic; font-weight: 600; }
 
   img { max-width: 100%; display: block; }
 
@@ -73,27 +77,28 @@
   }
 
   .section-heading h2 {
-    font-size: clamp(1.7rem, 3vw, 2.3rem);
-    color: var(--color-primary-dark);
+    font-size: clamp(1.8rem, 3vw, 2.4rem);
+    color: var(--color-pine-deep);
   }
 
   .section-heading p {
-    color: var(--color-text-muted);
-    margin-top: 12px;
+    color: var(--color-ink-muted);
+    margin-top: 14px;
     font-size: 1.05rem;
   }
 
   .eyebrow {
     display: inline-block;
-    color: var(--color-teal);
-    font-weight: 600;
-    letter-spacing: 0.08em;
+    font-family: var(--font-utility);
+    color: var(--color-stamp);
+    font-weight: 400;
+    letter-spacing: 0.06em;
     text-transform: uppercase;
-    font-size: 0.78rem;
-    margin-bottom: 10px;
+    font-size: 0.72rem;
+    margin-bottom: 12px;
   }
 
-  section { padding: 88px 0; }
+  section { padding: 96px 0; }
 
   /* Buttons */
   .btn {
@@ -101,41 +106,43 @@
     align-items: center;
     justify-content: center;
     gap: 8px;
-    padding: 14px 28px;
-    border-radius: 999px;
+    padding: 14px 26px;
+    border-radius: 8px;
     font-weight: 600;
-    font-size: 1rem;
+    font-size: 0.92rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
     text-decoration: none;
     border: 2px solid transparent;
     cursor: pointer;
     transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease, color 0.15s ease;
   }
-  .btn:hover { transform: translateY(-2px); }
+  .btn:hover { transform: rotate(-1deg) translateY(-1px); }
   .btn:focus-visible {
-    outline: 3px solid var(--color-teal);
+    outline: 3px solid var(--color-pine);
     outline-offset: 2px;
   }
 
   .btn-primary {
-    background: var(--color-accent);
-    color: var(--color-white);
-    box-shadow: 0 6px 18px rgba(255, 122, 89, 0.35);
+    background: var(--color-stamp);
+    color: var(--color-card);
+    box-shadow: 0 6px 16px rgba(179, 64, 46, 0.35);
   }
-  .btn-primary:hover { background: var(--color-accent-dark); }
+  .btn-primary:hover { background: var(--color-stamp-dark); }
 
   .btn-secondary {
     background: transparent;
-    color: var(--color-white);
-    border-color: rgba(255,255,255,0.7);
+    color: var(--color-card);
+    border-color: rgba(247, 241, 228, 0.6);
   }
-  .btn-secondary:hover { background: rgba(255,255,255,0.15); }
+  .btn-secondary:hover { background: rgba(247, 241, 228, 0.12); }
 
   .btn-outline {
     background: transparent;
-    color: var(--color-primary);
-    border-color: var(--color-primary);
+    color: var(--color-pine);
+    border-color: var(--color-pine);
   }
-  .btn-outline:hover { background: var(--color-blue-light); }
+  .btn-outline:hover { background: var(--color-pine-light); }
 
   /* ============================= */
   /* =====  NAVBAR (STICKY)  ===== */
@@ -147,7 +154,7 @@
     height: var(--nav-height);
     display: flex;
     align-items: center;
-    background: rgba(255, 255, 255, 0.92);
+    background: rgba(237, 227, 208, 0.92);
     backdrop-filter: blur(8px);
     border-bottom: 1px solid var(--color-border);
   }
@@ -161,29 +168,31 @@
   .logo {
     display: flex;
     align-items: center;
-    gap: 10px;
-    font-weight: 700;
+    gap: 12px;
+    font-family: var(--font-display);
+    font-weight: 600;
     font-size: 1.2rem;
-    color: var(--color-primary-dark);
+    color: var(--color-pine-deep);
     text-decoration: none;
   }
 
   .logo-mark {
     width: 36px;
     height: 36px;
-    border-radius: 10px;
-    background: linear-gradient(135deg, var(--color-primary), var(--color-teal));
+    border-radius: 6px;
+    background: var(--color-pine);
     display: flex;
     align-items: center;
     justify-content: center;
-    color: white;
+    color: var(--color-card);
     font-size: 1.1rem;
+    flex-shrink: 0;
   }
 
   .nav-links {
     display: flex;
     align-items: center;
-    gap: 32px;
+    gap: 30px;
     list-style: none;
     margin: 0;
     padding: 0;
@@ -192,19 +201,19 @@
   .nav-links a {
     text-decoration: none;
     font-weight: 500;
-    color: var(--color-text);
-    font-size: 0.98rem;
+    color: var(--color-ink);
+    font-size: 0.96rem;
     padding: 6px 2px;
     border-bottom: 2px solid transparent;
     transition: color 0.15s ease, border-color 0.15s ease;
   }
   .nav-links a:hover,
-  .nav-links a:focus-visible { color: var(--color-primary); border-color: var(--color-teal); }
+  .nav-links a:focus-visible { color: var(--color-pine); border-color: var(--color-stamp); }
 
   .nav-cta {
     display: inline-flex;
-    padding: 10px 20px;
-    font-size: 0.95rem;
+    padding: 10px 18px;
+    font-size: 0.82rem;
   }
 
   .nav-toggle {
@@ -222,7 +231,7 @@
   .nav-toggle span {
     display: block;
     height: 2px;
-    background: var(--color-primary-dark);
+    background: var(--color-pine-deep);
     border-radius: 2px;
     transition: transform 0.2s ease, opacity 0.2s ease;
   }
@@ -230,14 +239,14 @@
   .nav-toggle[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
   .nav-toggle[aria-expanded="true"] span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
-  @media (max-width: 860px) {
+  @media (max-width: 900px) {
     .nav-toggle { display: flex; }
     .nav-links {
       position: absolute;
       top: var(--nav-height);
       left: 0;
       right: 0;
-      background: var(--color-white);
+      background: var(--color-paper);
       flex-direction: column;
       align-items: stretch;
       gap: 0;
@@ -246,7 +255,7 @@
       border-bottom: 1px solid var(--color-border);
       transition: max-height 0.25s ease;
     }
-    .nav-links.open { max-height: 400px; }
+    .nav-links.open { max-height: 460px; }
     .nav-links li { border-top: 1px solid var(--color-border); }
     .nav-links a { display: block; padding: 16px 24px; }
     .nav-cta { margin: 16px 24px; }
@@ -257,9 +266,8 @@
   /* ============================= */
   .hero {
     position: relative;
-    color: var(--color-white);
-    background: linear-gradient(120deg, var(--color-primary-dark) 0%, var(--color-primary) 55%, var(--color-teal) 100%);
-    padding: 100px 0 0;
+    background: var(--color-pine-deep);
+    padding: 72px 0 0;
     overflow: hidden;
   }
 
@@ -267,9 +275,8 @@
     content: "";
     position: absolute;
     inset: 0;
-    background:
-      radial-gradient(circle at 85% 20%, rgba(255,255,255,0.14), transparent 45%),
-      radial-gradient(circle at 10% 90%, rgba(255,255,255,0.10), transparent 40%);
+    background-image: radial-gradient(circle, rgba(247, 241, 228, 0.10) 1.5px, transparent 1.5px);
+    background-size: 26px 26px;
     pointer-events: none;
   }
 
@@ -277,22 +284,54 @@
     position: relative;
     display: grid;
     grid-template-columns: 1.1fr 0.9fr;
-    gap: 48px;
+    gap: 64px;
     align-items: center;
-    padding-bottom: 64px;
+    padding: 56px 0 88px;
   }
 
-  .hero-content .eyebrow { color: #bdf0e8; }
+  .hero-card {
+    position: relative;
+    background: var(--color-card);
+    color: var(--color-ink);
+    border-radius: var(--radius);
+    padding: 46px 42px;
+    box-shadow: var(--shadow-md);
+    transform: rotate(-1.1deg);
+    animation: settle-in 0.7s ease-out;
+  }
 
-  .hero-content h1 {
-    font-size: clamp(2.2rem, 4.5vw, 3.4rem);
+  @keyframes settle-in {
+    from { opacity: 0; transform: rotate(-4deg) translateY(14px); }
+    to { opacity: 1; transform: rotate(-1.1deg) translateY(0); }
+  }
+
+  .folder-tab {
+    position: absolute;
+    top: -24px;
+    left: 34px;
+    background: var(--color-paper-deep);
+    color: var(--color-ink-muted);
+    font-family: var(--font-utility);
+    font-size: 0.68rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    padding: 7px 16px;
+    border-radius: 4px 4px 0 0;
+    box-shadow: 0 -2px 6px rgba(34, 40, 31, 0.08);
+  }
+
+  .hero-card .eyebrow { color: var(--color-stamp); }
+
+  .hero-card h1 {
+    font-size: clamp(2.1rem, 4vw, 3.1rem);
     font-weight: 700;
+    color: var(--color-pine-deep);
   }
 
-  .hero-content p {
+  .hero-card p {
     margin-top: 18px;
-    font-size: 1.15rem;
-    color: rgba(255,255,255,0.9);
+    font-size: 1.1rem;
+    color: var(--color-ink-muted);
     max-width: 46ch;
   }
 
@@ -303,111 +342,164 @@
     gap: 16px;
   }
 
+  .hero-card .btn-secondary { color: var(--color-pine); border-color: var(--color-pine); }
+  .hero-card .btn-secondary:hover { background: var(--color-pine-light); }
+
   .hero-visual {
     position: relative;
     display: flex;
     justify-content: center;
+    padding: 24px;
   }
 
   .hero-visual .card {
-    background: rgba(255,255,255,0.12);
-    border: 1px solid rgba(255,255,255,0.25);
+    position: relative;
+    background: var(--color-card);
     border-radius: var(--radius);
     padding: 28px;
-    backdrop-filter: blur(6px);
     width: 100%;
-    max-width: 340px;
+    max-width: 320px;
+    box-shadow: var(--shadow-md);
   }
+
+  .hero-visual .card::before,
+  .hero-visual .card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: var(--color-paper-deep);
+    border-radius: var(--radius);
+    z-index: -1;
+  }
+  .hero-visual .card::before { transform: rotate(-5deg) translate(-8px, 6px); }
+  .hero-visual .card::after { transform: rotate(5deg) translate(8px, -6px); }
 
   .hero-visual .card-icon {
     width: 52px;
     height: 52px;
-    border-radius: 12px;
-    background: var(--color-white);
-    color: var(--color-primary);
+    border-radius: 10px;
+    background: var(--color-pine);
+    color: var(--color-card);
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.6rem;
+    font-size: 1.5rem;
     margin-bottom: 16px;
   }
 
-  .hero-visual .card h3 { font-size: 1.15rem; margin-bottom: 8px; }
-  .hero-visual .card p { margin: 0; color: rgba(255,255,255,0.85); font-size: 0.95rem; }
+  .hero-visual .card h3 { font-size: 1.1rem; margin-bottom: 8px; color: var(--color-pine-deep); }
+  .hero-visual .card p { margin: 0; color: var(--color-ink-muted); font-size: 0.95rem; }
 
-  /* Trust strip */
-  .trust-strip {
-    position: relative;
-    background: rgba(255, 255, 255, 0.08);
-    border-top: 1px solid rgba(255,255,255,0.18);
+  @media (max-width: 900px) {
+    .hero-inner { grid-template-columns: 1fr; text-align: center; padding-top: 24px; }
+    .hero-card { transform: none; animation: none; }
+    .hero-card p { margin-left: auto; margin-right: auto; }
+    .hero-actions { justify-content: center; }
+    .hero-visual { order: -1; }
+    .folder-tab { left: 50%; transform: translateX(-50%); }
   }
 
-  .trust-strip ul {
+  /* Stamp strip */
+  .stamp-strip {
+    position: relative;
+    background: var(--color-paper-deep);
+    border-top: 1px solid rgba(34, 40, 31, 0.08);
+  }
+
+  .stamp-strip-list {
     list-style: none;
     margin: 0;
-    padding: 22px 0;
+    padding: 36px 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 12px 40px;
+    gap: 20px 36px;
   }
 
-  .trust-strip li {
+  .stamp-badge {
+    width: 108px;
+    height: 108px;
+    border-radius: 50%;
+    border: 2px solid var(--color-stamp);
+    outline: 1px dashed var(--color-stamp);
+    outline-offset: 5px;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    gap: 10px;
-    font-weight: 500;
-    font-size: 0.95rem;
-    color: var(--color-white);
+    justify-content: center;
+    gap: 2px;
+    color: var(--color-stamp);
+    mix-blend-mode: multiply;
   }
 
-  .trust-strip li span.icon {
-    font-size: 1.1rem;
+  .stamp-badge .figure {
+    font-family: var(--font-utility);
+    font-size: 1.15rem;
+    font-weight: 400;
   }
 
-  @media (max-width: 900px) {
-    .hero-inner { grid-template-columns: 1fr; text-align: center; }
-    .hero-content p { margin-left: auto; margin-right: auto; }
-    .hero-actions { justify-content: center; }
-    .hero-visual { order: -1; }
+  .stamp-badge .label {
+    font-family: var(--font-utility);
+    font-size: 0.6rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 0 8px;
   }
 
   /* ============================= */
   /* =====    SERVICES        ==== */
   /* ============================= */
-  .services { background: var(--color-blue-light); }
+  .services { background: var(--color-paper); }
 
   .services-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 24px;
+    gap: 28px;
   }
 
   .service-card {
-    background: var(--color-white);
+    position: relative;
+    background: var(--color-card);
     border-radius: var(--radius);
-    padding: 30px 24px;
+    padding: 32px 24px 26px;
     box-shadow: var(--shadow-sm);
     border: 1px solid var(--color-border);
+    transform: rotate(var(--tilt, 0deg));
     transition: transform 0.2s ease, box-shadow 0.2s ease;
   }
-  .service-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
+  .service-card:nth-child(odd) { --tilt: -0.8deg; }
+  .service-card:nth-child(even) { --tilt: 0.8deg; }
+  .service-card:hover { transform: rotate(0deg) translateY(-4px); box-shadow: var(--shadow-md); }
+
+  .chart-tag {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    font-family: var(--font-utility);
+    font-size: 0.6rem;
+    letter-spacing: 0.04em;
+    color: var(--color-ink-muted);
+    border: 1px solid var(--color-border);
+    border-radius: 3px;
+    padding: 3px 7px;
+  }
 
   .service-icon {
-    width: 48px;
-    height: 48px;
-    border-radius: 12px;
-    background: var(--color-teal-light);
-    color: var(--color-teal);
+    width: 46px;
+    height: 46px;
+    border-radius: 10px;
+    background: var(--color-pine-light);
+    color: var(--color-pine);
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     margin-bottom: 18px;
   }
 
-  .service-card h3 { font-size: 1.1rem; margin-bottom: 8px; color: var(--color-primary-dark); }
-  .service-card p { margin: 0; color: var(--color-text-muted); font-size: 0.95rem; }
+  .service-card h3 { font-size: 1.08rem; margin-bottom: 8px; color: var(--color-pine-deep); }
+  .service-card p { margin: 0; color: var(--color-ink-muted); font-size: 0.94rem; }
 
   @media (max-width: 900px) {
     .services-grid { grid-template-columns: repeat(2, 1fr); }
@@ -417,30 +509,136 @@
   }
 
   /* ============================= */
+  /* =====   TAKE-HOME CARD   ==== */
+  /* ============================= */
+  .checklist-section { background: var(--color-paper-deep); }
+
+  .checklist-card {
+    background: var(--color-card);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-md);
+    border: 1px solid var(--color-border);
+    overflow: hidden;
+  }
+
+  .checklist-tear {
+    text-align: center;
+    font-family: var(--font-utility);
+    font-size: 0.66rem;
+    letter-spacing: 0.1em;
+    color: var(--color-ink-muted);
+    padding: 10px 0;
+    border-bottom: 2px dashed var(--color-border);
+    text-transform: uppercase;
+  }
+
+  .checklist-body {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    padding: 44px;
+  }
+
+  .checklist-copy h3 {
+    font-family: var(--font-utility);
+    font-size: 0.85rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--color-pine-deep);
+    margin-bottom: 16px;
+  }
+
+  .checklist-points {
+    margin: 0;
+    padding-left: 20px;
+    color: var(--color-ink-muted);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .checklist-points li { font-size: 0.98rem; }
+
+  .checklist-form { display: flex; flex-direction: column; justify-content: center; }
+
+  .checklist-form-row {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+
+  .checklist-form-row input {
+    flex: 1 1 220px;
+    font: inherit;
+    padding: 13px 14px;
+    border-radius: 8px;
+    border: 1.5px solid var(--color-border);
+    background: var(--color-paper);
+    color: var(--color-ink);
+    transition: border-color 0.15s ease, box-shadow 0.15s ease;
+  }
+
+  .checklist-form-row input:focus {
+    outline: none;
+    border-color: var(--color-pine);
+    box-shadow: 0 0 0 3px rgba(31, 92, 78, 0.16);
+  }
+
+  .checklist-form-row input[aria-invalid="true"] { border-color: var(--color-stamp); }
+
+  .checklist-microcopy {
+    margin: 12px 0 0;
+    font-size: 0.85rem;
+    color: var(--color-ink-muted);
+  }
+
+  @media (max-width: 900px) {
+    .checklist-body { grid-template-columns: 1fr; padding: 32px; }
+  }
+  @media (max-width: 560px) {
+    .checklist-form-row { flex-direction: column; }
+    .checklist-form-row .btn { width: 100%; }
+  }
+
+  /* ============================= */
   /* =====  TESTIMONIALS      ==== */
   /* ============================= */
+  .testimonials { background: var(--color-paper); }
+
   .testimonials-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 24px;
+    gap: 28px;
   }
 
   .testimonial-card {
-    background: var(--color-white);
+    position: relative;
+    background: var(--color-card);
     border: 1px solid var(--color-border);
     border-radius: var(--radius);
-    padding: 28px;
+    padding: 30px 26px 26px;
     box-shadow: var(--shadow-sm);
     display: flex;
     flex-direction: column;
     gap: 16px;
   }
 
-  .stars { color: #f5a623; font-size: 1rem; letter-spacing: 2px; }
-  .stars .empty { color: #e2e2e2; }
+  .testimonial-card::before {
+    content: "";
+    position: absolute;
+    top: -11px;
+    left: 50%;
+    width: 74px;
+    height: 24px;
+    background: rgba(31, 92, 78, 0.16);
+    border: 1px solid rgba(31, 92, 78, 0.22);
+    transform: translateX(-50%) rotate(-2.5deg);
+  }
+
+  .stars { color: var(--color-stamp); font-size: 1rem; letter-spacing: 2px; }
+  .stars .empty { color: var(--color-border); }
 
   .testimonial-quote {
-    color: var(--color-text);
+    color: var(--color-ink);
     font-size: 0.98rem;
     flex-grow: 1;
   }
@@ -452,20 +650,20 @@
   }
 
   .avatar {
-    width: 46px;
-    height: 46px;
+    width: 44px;
+    height: 44px;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--color-white);
+    color: var(--color-card);
     font-weight: 600;
-    font-family: var(--font-heading);
+    font-family: var(--font-display);
     flex-shrink: 0;
   }
 
-  .testimonial-person .name { font-weight: 600; font-size: 0.95rem; }
-  .testimonial-person .role { color: var(--color-text-muted); font-size: 0.85rem; }
+  .testimonial-person .name { font-weight: 600; font-size: 0.95rem; color: var(--color-pine-deep); }
+  .testimonial-person .role { color: var(--color-ink-muted); font-size: 0.85rem; }
 
   @media (max-width: 900px) {
     .testimonials-grid { grid-template-columns: repeat(2, 1fr); }
@@ -477,7 +675,7 @@
   /* ============================= */
   /* =====   ENQUIRY FORM     ==== */
   /* ============================= */
-  .contact { background: var(--color-blue-light); }
+  .contact { background: var(--color-paper-deep); }
 
   .contact-wrap {
     display: grid;
@@ -487,14 +685,14 @@
   }
 
   .contact-info {
-    background: linear-gradient(160deg, var(--color-primary-dark), var(--color-primary));
-    color: var(--color-white);
+    background: linear-gradient(160deg, var(--color-pine-deep), var(--color-pine));
+    color: var(--color-card);
     border-radius: var(--radius);
-    padding: 36px 30px;
+    padding: 38px 32px;
   }
 
   .contact-info h3 { font-size: 1.3rem; margin-bottom: 12px; }
-  .contact-info p { color: rgba(255,255,255,0.88); margin-bottom: 24px; }
+  .contact-info p { color: rgba(247, 241, 228, 0.85); margin-bottom: 24px; }
 
   .contact-info ul {
     list-style: none;
@@ -516,7 +714,7 @@
     width: 34px;
     height: 34px;
     border-radius: 8px;
-    background: rgba(255,255,255,0.15);
+    background: rgba(247, 241, 228, 0.14);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -524,9 +722,16 @@
   }
 
   .contact-form {
-    background: var(--color-white);
+    background: var(--color-card);
+    background-image: repeating-linear-gradient(
+      to bottom,
+      transparent 0,
+      transparent 38px,
+      rgba(34, 40, 31, 0.05) 39px
+    );
+    background-position: 0 100px;
     border-radius: var(--radius);
-    padding: 36px;
+    padding: 38px;
     box-shadow: var(--shadow-md);
     border: 1px solid var(--color-border);
   }
@@ -534,43 +739,46 @@
   .form-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 20px;
+    gap: 22px;
   }
 
-  .form-field { display: flex; flex-direction: column; gap: 6px; }
+  .form-field { display: flex; flex-direction: column; gap: 7px; }
   .form-field.full { grid-column: 1 / -1; }
 
   .form-field label {
-    font-weight: 600;
-    font-size: 0.9rem;
-    color: var(--color-text);
+    font-family: var(--font-utility);
+    font-weight: 400;
+    font-size: 0.72rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--color-ink-muted);
   }
 
   .form-field input,
   .form-field textarea {
     font: inherit;
     padding: 12px 14px;
-    border-radius: 10px;
+    border-radius: 8px;
     border: 1.5px solid var(--color-border);
-    background: var(--color-white);
-    color: var(--color-text);
+    background: var(--color-paper);
+    color: var(--color-ink);
     transition: border-color 0.15s ease, box-shadow 0.15s ease;
   }
 
   .form-field input:focus,
   .form-field textarea:focus {
     outline: none;
-    border-color: var(--color-teal);
-    box-shadow: 0 0 0 3px rgba(20, 184, 166, 0.18);
+    border-color: var(--color-pine);
+    box-shadow: 0 0 0 3px rgba(31, 92, 78, 0.16);
   }
 
   .form-field input[aria-invalid="true"],
   .form-field textarea[aria-invalid="true"] {
-    border-color: #e0453c;
+    border-color: var(--color-stamp);
   }
 
   .field-error {
-    color: #d1392f;
+    color: var(--color-stamp-dark);
     font-size: 0.82rem;
     min-height: 1em;
   }
@@ -585,22 +793,22 @@
   .form-status {
     margin-top: 18px;
     padding: 14px 16px;
-    border-radius: 10px;
+    border-radius: 8px;
     font-size: 0.95rem;
     font-weight: 500;
     display: none;
   }
   .form-status.success {
     display: block;
-    background: var(--color-teal-light);
-    color: #0d6b5e;
-    border: 1px solid #b8ece2;
+    background: var(--color-pine-light);
+    color: var(--color-pine-deep);
+    border: 1px solid rgba(31, 92, 78, 0.25);
   }
   .form-status.error {
     display: block;
-    background: #fdeceb;
-    color: #a52f27;
-    border: 1px solid #f5c6c2;
+    background: #F7E3DE;
+    color: var(--color-stamp-dark);
+    border: 1px solid rgba(179, 64, 46, 0.3);
   }
 
   @media (max-width: 900px) {
@@ -608,15 +816,15 @@
   }
   @media (max-width: 560px) {
     .form-grid { grid-template-columns: 1fr; }
-    .contact-form { padding: 24px; }
+    .contact-form { padding: 26px; }
   }
 
   /* ============================= */
   /* =====      FOOTER        ==== */
   /* ============================= */
   footer {
-    background: #0a3242;
-    color: rgba(255,255,255,0.85);
+    background: var(--color-pine-deep);
+    color: rgba(247, 241, 228, 0.85);
     padding: 64px 0 24px;
   }
 
@@ -625,43 +833,46 @@
     grid-template-columns: 1.4fr 1fr 1fr;
     gap: 40px;
     padding-bottom: 40px;
-    border-bottom: 1px solid rgba(255,255,255,0.12);
+    border-bottom: 1px solid rgba(247, 241, 228, 0.14);
   }
 
-  .footer-brand .logo { color: var(--color-white); margin-bottom: 14px; }
-  .footer-brand p { color: rgba(255,255,255,0.7); max-width: 34ch; font-size: 0.92rem; }
+  .footer-brand .logo { color: var(--color-card); margin-bottom: 14px; }
+  .footer-brand p { color: rgba(247, 241, 228, 0.7); max-width: 34ch; font-size: 0.92rem; }
 
   .footer-col h4 {
-    font-family: var(--font-heading);
-    color: var(--color-white);
-    font-size: 1rem;
+    font-family: var(--font-utility);
+    font-weight: 400;
+    color: var(--color-card);
+    font-size: 0.85rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
     margin-bottom: 18px;
   }
 
   .footer-col ul { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 12px; }
-  .footer-col a { text-decoration: none; color: rgba(255,255,255,0.75); font-size: 0.92rem; transition: color 0.15s ease; }
-  .footer-col a:hover, .footer-col a:focus-visible { color: var(--color-teal); }
+  .footer-col a { text-decoration: none; color: rgba(247, 241, 228, 0.75); font-size: 0.92rem; transition: color 0.15s ease; }
+  .footer-col a:hover, .footer-col a:focus-visible { color: var(--color-stamp); }
 
-  .footer-col address { font-style: normal; color: rgba(255,255,255,0.75); font-size: 0.92rem; line-height: 1.8; }
+  .footer-col address { font-style: normal; color: rgba(247, 241, 228, 0.75); font-size: 0.92rem; line-height: 1.8; }
 
   .social-links { display: flex; gap: 12px; margin-top: 18px; }
   .social-links a {
     width: 38px;
     height: 38px;
     border-radius: 50%;
-    background: rgba(255,255,255,0.1);
+    background: rgba(247, 241, 228, 0.1);
     display: flex;
     align-items: center;
     justify-content: center;
     transition: background 0.15s ease, transform 0.15s ease;
   }
-  .social-links a:hover { background: var(--color-teal); transform: translateY(-2px); }
+  .social-links a:hover { background: var(--color-stamp); transform: translateY(-2px); }
 
   .footer-bottom {
     padding-top: 24px;
     text-align: center;
     font-size: 0.85rem;
-    color: rgba(255,255,255,0.55);
+    color: rgba(247, 241, 228, 0.55);
   }
 
   @media (max-width: 760px) {
@@ -684,14 +895,15 @@
   @media (prefers-reduced-motion: reduce) {
     html { scroll-behavior: auto; }
     .fade-in { opacity: 1; transform: none; transition: none; }
+    .hero-card { animation: none; }
   }
 
   .skip-link {
     position: absolute;
     left: -999px;
     top: auto;
-    background: var(--color-primary);
-    color: var(--color-white);
+    background: var(--color-pine);
+    color: var(--color-card);
     padding: 12px 18px;
     border-radius: 8px;
     z-index: 2000;
@@ -730,6 +942,7 @@
       <li><a href="#hero">Home</a></li>
       <li><a href="#services">Services</a></li>
       <li><a href="#testimonials">Testimonials</a></li>
+      <li><a href="#checklist">Checklist</a></li>
       <li><a href="#contact">Contact</a></li>
       <li><a href="#contact" class="btn btn-primary nav-cta">Book Appointment</a></li>
     </ul>
@@ -741,13 +954,14 @@
   <!-- ===== HERO SECTION ===== -->
   <section id="hero" class="hero">
     <div class="container hero-inner">
-      <div class="hero-content">
+      <div class="hero-card">
+        <span class="folder-tab">File No. 001 &middot; Est. Willow Creek</span>
         <span class="eyebrow">Willow Creek Family Clinic</span>
-        <h1>Compassionate Care, Close to You</h1>
+        <h1>Compassionate Care, <em>Close to You</em></h1>
         <p>From routine checkups to specialist care, our board-certified team is here for you and your family — with same-week appointments and a clinic that feels like home.</p>
         <div class="hero-actions">
           <a href="#contact" class="btn btn-primary">Book an Appointment</a>
-          <a href="#services" class="btn btn-secondary">Our Services</a>
+          <a href="#services" class="btn btn-outline">Our Services</a>
         </div>
       </div>
 
@@ -760,13 +974,25 @@
       </div>
     </div>
 
-    <div class="trust-strip">
+    <div class="stamp-strip">
       <div class="container">
-        <ul>
-          <li><span class="icon">&#128337;</span> 24/7 Support</li>
-          <li><span class="icon">&#127891;</span> Certified Doctors</li>
-          <li><span class="icon">&#128101;</span> 10,000+ Patients Served</li>
-          <li><span class="icon">&#11088;</span> 4.9/5 Patient Rating</li>
+        <ul class="stamp-strip-list">
+          <li class="stamp-badge" style="transform: rotate(-6deg);">
+            <span class="figure">24/7</span>
+            <span class="label">Support</span>
+          </li>
+          <li class="stamp-badge" style="transform: rotate(4deg);">
+            <span class="figure">M.D.</span>
+            <span class="label">Certified</span>
+          </li>
+          <li class="stamp-badge" style="transform: rotate(-3deg);">
+            <span class="figure">10K+</span>
+            <span class="label">Patients</span>
+          </li>
+          <li class="stamp-badge" style="transform: rotate(5deg);">
+            <span class="figure">4.9</span>
+            <span class="label">Rating</span>
+          </li>
         </ul>
       </div>
     </div>
@@ -783,24 +1009,64 @@
 
       <div class="services-grid">
         <div class="service-card fade-in">
+          <span class="chart-tag">Chart 01</span>
           <div class="service-icon" aria-hidden="true">&#128137;</div>
           <h3>General Checkups</h3>
           <p>Comprehensive annual physicals and preventive screenings for every age group.</p>
         </div>
         <div class="service-card fade-in">
+          <span class="chart-tag">Chart 02</span>
           <div class="service-icon" aria-hidden="true">&#129489;&#8205;&#128105;&#8205;&#128103;</div>
           <h3>Pediatrics</h3>
           <p>Gentle, attentive care for infants, children, and teens from our pediatric specialists.</p>
         </div>
         <div class="service-card fade-in">
+          <span class="chart-tag">Chart 03</span>
           <div class="service-icon" aria-hidden="true">&#10084;&#65039;</div>
           <h3>Cardiology</h3>
           <p>Heart health assessments, ECGs, and ongoing management for cardiovascular conditions.</p>
         </div>
         <div class="service-card fade-in">
+          <span class="chart-tag">Chart 04</span>
           <div class="service-icon" aria-hidden="true">&#128680;</div>
           <h3>Emergency Care</h3>
           <p>Round-the-clock urgent care for when you need immediate medical attention.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TAKE-HOME CARD / LEAD MAGNET SECTION ===== -->
+  <section id="checklist" class="checklist-section">
+    <div class="container">
+      <div class="section-heading fade-in">
+        <span class="eyebrow">Take It Home</span>
+        <h2>The Whole-Family Preventive Care Checklist</h2>
+        <p>One page. Every age group. Never wonder what checkup is due next.</p>
+      </div>
+
+      <div class="checklist-card fade-in">
+        <div class="checklist-tear">&#8213; &#8213; &#8213; tear here &#8213; &#8213; &#8213;</div>
+        <div class="checklist-body">
+          <div class="checklist-copy">
+            <h3>What's inside</h3>
+            <ul class="checklist-points">
+              <li>Recommended screenings for kids, teens, adults, and 50+</li>
+              <li>How often each checkup should happen</li>
+              <li>A quick self-check to run before your next visit</li>
+            </ul>
+          </div>
+
+          <form class="checklist-form" id="checklistForm" novalidate>
+            <label for="checklistEmail" class="visually-hidden">Email address</label>
+            <div class="checklist-form-row">
+              <input type="email" id="checklistEmail" name="checklistEmail" placeholder="you@example.com" autocomplete="email" aria-describedby="checklistEmailError">
+              <button type="submit" class="btn btn-primary">Send Me the Checklist</button>
+            </div>
+            <span class="field-error" id="checklistEmailError" role="alert"></span>
+            <p class="checklist-microcopy">One page. Five-minute read. No spam, unsubscribe anytime.</p>
+            <div class="form-status" id="checklistStatus" role="alert" aria-live="polite"></div>
+          </form>
         </div>
       </div>
     </div>
@@ -820,7 +1086,7 @@
           <div class="stars" aria-label="Rated 5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
           <p class="testimonial-quote">"The staff at Willow Creek treated my father with such patience and kindness. The doctors actually listen, and I never feel rushed during appointments."</p>
           <div class="testimonial-person">
-            <div class="avatar" style="background:#0f6e8c;">MJ</div>
+            <div class="avatar" style="background:var(--color-pine);">MJ</div>
             <div>
               <div class="name">Maria Jimenez</div>
               <div class="role">Patient since 2019</div>
@@ -832,7 +1098,7 @@
           <div class="stars" aria-label="Rated 5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
           <p class="testimonial-quote">"Booking online was effortless and I was seen the same week. The pediatric team put my daughter completely at ease during her checkup."</p>
           <div class="testimonial-person">
-            <div class="avatar" style="background:#14b8a6;">DT</div>
+            <div class="avatar" style="background:var(--color-stamp);">DT</div>
             <div>
               <div class="name">David Thompson</div>
               <div class="role">Patient since 2021</div>
@@ -844,7 +1110,7 @@
           <div class="stars" aria-label="Rated 4.5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;<span class="empty">&#9733;</span></div>
           <p class="testimonial-quote">"After years of putting off my heart checkups, the cardiology team here made the whole process painless and clearly explained every step."</p>
           <div class="testimonial-person">
-            <div class="avatar" style="background:#ff7a59;">RK</div>
+            <div class="avatar" style="background:var(--color-pine-deep);">RK</div>
             <div>
               <div class="name">Ravi Kapoor</div>
               <div class="role">Patient since 2018</div>
@@ -856,7 +1122,7 @@
           <div class="stars" aria-label="Rated 5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
           <p class="testimonial-quote">"Clean facility, friendly front desk, and a doctor who remembered details from my last visit. It's rare to find a clinic that feels this personal."</p>
           <div class="testimonial-person">
-            <div class="avatar" style="background:#0b4f65;">SL</div>
+            <div class="avatar" style="background:var(--color-ink-muted);">SL</div>
             <div>
               <div class="name">Sarah Lin</div>
               <div class="role">Patient since 2022</div>
@@ -955,6 +1221,7 @@
           <li><a href="#hero">Home</a></li>
           <li><a href="#services">Services</a></li>
           <li><a href="#testimonials">Testimonials</a></li>
+          <li><a href="#checklist">Checklist</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </div>
@@ -1023,6 +1290,18 @@
   }
 
   // ============================================
+  // ===== SHARED FIELD-ERROR HELPER ============
+  // ============================================
+  function showFieldError(field, message) {
+    field.error.textContent = message;
+    if (message) {
+      field.input.setAttribute('aria-invalid', 'true');
+    } else {
+      field.input.removeAttribute('aria-invalid');
+    }
+  }
+
+  // ============================================
   // ===== APPOINTMENT FORM VALIDATION ==========
   // ============================================
   const form = document.getElementById('appointmentForm');
@@ -1063,15 +1342,6 @@
       validate: (value) => value.trim().length > 0 ? '' : 'Please tell us the reason for your visit.'
     }
   };
-
-  function showFieldError(field, message) {
-    field.error.textContent = message;
-    if (message) {
-      field.input.setAttribute('aria-invalid', 'true');
-    } else {
-      field.input.removeAttribute('aria-invalid');
-    }
-  }
 
   function clearAllErrors() {
     Object.values(fields).forEach((field) => showFieldError(field, ''));
@@ -1126,6 +1396,63 @@
     formStatus.className = 'form-status success';
     formStatus.textContent = "Thank you! We'll contact you shortly.";
     form.reset();
+  });
+
+  // ============================================
+  // ===== CHECKLIST (LEAD MAGNET) FORM =========
+  // ============================================
+  const checklistForm = document.getElementById('checklistForm');
+  const checklistStatus = document.getElementById('checklistStatus');
+
+  const checklistFields = {
+    checklistEmail: {
+      input: document.getElementById('checklistEmail'),
+      error: document.getElementById('checklistEmailError'),
+      validate: (value) => {
+        if (!value.trim()) return 'Please enter your email address.';
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return emailPattern.test(value.trim()) ? '' : 'Please enter a valid email address.';
+      }
+    }
+  };
+
+  checklistForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    checklistStatus.className = 'form-status';
+    checklistStatus.textContent = '';
+
+    const field = checklistFields.checklistEmail;
+    const message = field.validate(field.input.value);
+    showFieldError(field, message);
+
+    if (message) {
+      checklistStatus.className = 'form-status error';
+      checklistStatus.textContent = 'Please correct the highlighted field and try again.';
+      field.input.focus();
+      return;
+    }
+
+    // Build the submission payload
+    const formData = {
+      email: field.input.value.trim(),
+      submittedAt: new Date().toISOString()
+    };
+
+    // ---------------------------------------------------------
+    // TODO: Replace this with a real API call when ready, e.g.:
+    // fetch('/api/lead-magnet', {
+    //   method: 'POST',
+    //   headers: { 'Content-Type': 'application/json' },
+    //   body: JSON.stringify(formData)
+    // });
+    // ---------------------------------------------------------
+    console.log('Checklist download requested:', formData);
+
+    showFieldError(field, '');
+    checklistStatus.className = 'form-status success';
+    checklistStatus.textContent = 'Check your inbox — your checklist is on its way!';
+    checklistForm.reset();
   });
 </script>
 

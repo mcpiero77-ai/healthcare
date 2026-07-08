@@ -1,6 +1,6 @@
 # Willow Creek Family Clinic
 
-A single-page marketing site for a healthcare clinic — hero, services, testimonials, and an appointment request form.
+A single-page marketing site for a healthcare clinic — hero, services, a downloadable care checklist, testimonials, and an appointment request form. Styled as "The Card Catalog": a warm, tactile visual identity built around index cards, folder tabs, and rubber-stamp badges.
 
 🔗 **Live site:** https://mcpiero77-ai.github.io/healthcare/
 
@@ -15,6 +15,7 @@ Sections, top to bottom:
 - **Navbar** — sticky header with smooth-scroll anchor links and a mobile hamburger menu
 - **Hero** — intro banner
 - **Services** — clinic offerings
+- **Checklist** — email-gated lead magnet (a downloadable preventive-care checklist)
 - **Testimonials** — patient reviews
 - **Contact** — client-side-validated appointment request form
 - **Footer**
@@ -23,7 +24,7 @@ Sections, top to bottom:
 
 - Mobile-first responsive layout
 - Scroll-triggered fade-in animations (`IntersectionObserver`, with a fallback for unsupported browsers)
-- Accessible form validation with inline error messages and `aria-invalid` states
+- Two independently validated forms (appointment request + checklist email capture), each with inline error messages and `aria-invalid` states
 - No frameworks, build tools, or dependencies
 
 ## Development
@@ -35,7 +36,7 @@ After making changes, manually re-check in the browser:
 - Sticky nav + smooth scroll to each section
 - Mobile hamburger menu at narrow widths
 - Scroll fade-in animations
-- The appointment form: empty submit, invalid email, and a valid submit (check the console-logged payload)
+- Both forms (appointment request and checklist signup): empty submit, invalid email, and a valid submit (check the console-logged payload)
 
 ## Deployment
 
